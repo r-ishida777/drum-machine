@@ -1,0 +1,116 @@
+body {
+  background-color: #8d8d8d;
+  margin: 0;
+  font-family: Russo One;
+}
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.container {
+  width: 670px;
+  height: 330px;
+  background-color: #b3b3b3;
+  border: solid 5px #ffa500;
+}
+.header {
+  text-align: right;
+  font-style: italic;
+  font-weight: 800;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  font-size: 1.3rem;
+  margin: 5px;
+  .logo {
+    margin-right: 5px;
+  }
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 330px;
+    padding-left: 20px;
+    .button {
+      width: 100px;
+      height: 80px;
+      background-color: #808080;
+      margin: 5px;
+      text-align: center;
+      line-height: 80px;
+      border-radius: 5px;
+      box-shadow: 5px 5px 5px #383838;
+    }
+    .active {
+      background-color: yellow;
+      box-shadow: none;
+      transform: translate(5px, 5px);
+    }
+  }
+  .controller {
+    width: 300px;
+    .control {
+      text-align: center;
+      margin: 20px;
+      .outer {
+        width: 55px;
+        height: 25px;
+        background-color: black;
+        box-sizing: border-box;
+        padding: 2px;
+        margin: 0 auto;
+
+        .inner {
+          width: 20px;
+          height: 21px;
+          background-color: #0000ff;
+          cursor: pointer;
+          transition: all 2s;
+        }
+      }
+    }
+    .display {
+      width: 200px;
+      height: 50px;
+      margin: 20px auto;
+      background-color: #808080;
+      text-align: center;
+      line-height: 50px;
+    }
+    .slider {
+      width: 250px;
+      height: 20px;
+      margin: 10px auto;
+      input {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        cursor: pointer;
+        outline: none;
+        &::-webkit-slider-runnable-track {
+          height: 5px;
+          background-color: #383838;
+          border: solid 1px black;
+          border-radius: 2px;
+          box-shadow: 2px 2px 2px black;
+        }
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          height: 25px;
+          width: 10px;
+          background-color: #0000ff;
+          margin-top: -10px;
+          border-radius: 2px;
+          box-shadow: 1px 1px 1px black;
+        }
+      }
+    }
+  }
+}
